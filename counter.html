@@ -3,7 +3,7 @@
 <head>
     <title>Countdown</title>
     <script>
-        window.onload = function() {
+        function updateCounter() {
             var targetDate = new Date("February 11, 2023").getTime(); // Das Ziel-Datum
             var today = new Date().getTime(); // Das aktuelle Datum
 
@@ -13,6 +13,8 @@
             var counterElement = document.getElementById("counter");
             counterElement.innerHTML = "Wir sind seit " + days + " Tage zusammen.";
         }
+        
+        window.onload = updateCounter;
     </script>
 </head>
 <body>
